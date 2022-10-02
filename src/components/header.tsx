@@ -1,5 +1,5 @@
 import React from "react";
-import UserIcon from "../assets/user-circle.svg";
+import UserIcon from "../../assets/user-circle.svg";
 import HeaderIcon from "@assets/home-icon.svg";
 import WalletIcon from "@assets/wallet.svg";
 

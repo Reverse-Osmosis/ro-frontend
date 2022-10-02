@@ -6,7 +6,7 @@ function Card() {
     <div>
       <div>
         <div>
-          <span>Project Name</span>
+          <h2>Project Name</h2>
           <FontAwesomeIcon
             icon={faTwitter}
             style={{
@@ -22,7 +22,13 @@ function Card() {
             }}
           />
         </div>
+        <div>Img</div>
       </div>
+      <div>
+        <span>Launch Date</span>
+        <span>4 Days 00:00:00</span>
+      </div>
+      <div></div>
     </div>
   );
 }

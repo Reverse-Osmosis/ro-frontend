@@ -6,7 +6,7 @@ const IS_FRONTIER = false;
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
     "./modals/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
