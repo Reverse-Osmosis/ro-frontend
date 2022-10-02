@@ -8,7 +8,7 @@ function Layout({ children }: layoutProps) {
   return (
     <div className="bg-background min-h-screen text-white-full grid  content-between">
       <Header />
-      <div className="bg-primary-50 max-w-6xl mx-auto">{children}</div>
+      <div className=" max-w-6xl mx-auto">{children}</div>
       <Footer />
     </div>
   );

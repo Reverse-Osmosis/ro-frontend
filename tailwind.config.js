@@ -84,6 +84,7 @@ module.exports = {
       modal: IS_FRONTIER ? "rgb(56, 53, 50, 0.8)" : "rgba(23, 15, 52, 0.8)",
       surface: IS_FRONTIER ? "#282421" : "#231D4B",
       card: IS_FRONTIER ? "#2E2C2F" : "#2D2755",
+      customCard: "#221551",
       cardInner: IS_FRONTIER ? "#383532" : "#3C356D",
       cardInfoPlaceholder: "#3E3866",
       iconDefault: IS_FRONTIER ? "#8E867B" : "#8E83AA",
@@ -94,6 +95,7 @@ module.exports = {
       black: "#000000",
       backdrop: "rgba(0, 0, 0, 0.3)",
       superfluid: "#8A86FF",
+      succesful: "#52EB7D",
     },
     fontSize: {
       xxs: "0.5rem",
