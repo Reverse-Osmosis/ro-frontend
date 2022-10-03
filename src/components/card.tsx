@@ -3,6 +3,7 @@ import { faTwitter, faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OsmoIcon from "@assets/superfluid-osmo.svg";
 import AtomIcon from "@assets/atom.svg";
+import WorldIcon from "@assets/icon-world.svg";
 import CardHeaderIcon from "@assets/card-header-icon.svg";
 import {
   faLock,
@@ -46,18 +47,18 @@ const getProjectIconStatus = (status: string) => {
   }
 };
 
-function Card({ status = Status.OPEN }: cardProps) {
+function Card({ status = Status.CLAIMED }: cardProps) {
   const dataStatus = getProjectIconStatus(status);
   return (
     <div className="bg-customCard rounded-2xl overflow-hidden">
       <div className=" px-5 pt-5  cursor-pointer relative">
         <CardHeader />
-        <div className="pb-10">
-          <span className="block">Launch Date</span>
-          <span className="text-lg">4 Days 00:00:00</span>
-        </div>
+        {status == Status.OPEN && <CardContentOpen />}
+        {(status == Status.CLAIMED || status == Status.REDEEM) && (
+          <CardContentAnotherState />
+        )}
         <div className="flex justify-between pb-4">
-          <div className="flex">
+          <div className="flex items-center">
             <OsmoIcon />
             <AtomIcon className="w-6" />
           </div>
@@ -94,6 +95,36 @@ function Card({ status = Status.OPEN }: cardProps) {
   );
 }
 
+const CardContentAnotherState = () => {
+  return (
+    <div className="pb-10 text-lg text-right">
+      <div className="pb-2">
+        <span className="block">Locked GAMM Balance</span>
+        <div className="flex justify-end items-center">
+          <OsmoIcon />
+          <span>1211212.22212</span>
+        </div>
+      </div>
+      <div>
+        <span className="block">Celestia Lockdrop Balance</span>
+        <span className="flex justify-end items-center">
+          <WorldIcon />
+          1000
+        </span>
+      </div>
+    </div>
+  );
+};
+
+const CardContentOpen = () => {
+  return (
+    <div className="pb-10">
+      <span className="block">Launch Date</span>
+      <span className="text-lg">4 Days 00:00:00</span>
+    </div>
+  );
+};
+
 const CardHeader = () => {
   return (
     <div className="flex justify-around items-center gap-x-5 mb-12">
@@ -115,7 +146,7 @@ const CardHeader = () => {
         />
       </div>
       <div>
-        <CardHeaderIcon className=" " />
+        <CardHeaderIcon />
       </div>
     </div>
   );
