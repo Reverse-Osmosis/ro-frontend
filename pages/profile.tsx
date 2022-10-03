@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../src/components/card";
 import Layout from "../src/components/layout";
 import PhotoJoke from "@assets/photo-joke.jpg";
+import ProfilePicture from "@assets/profile-picture.jpg";
 
 function Profile() {
   return (
@@ -27,7 +28,11 @@ type walletInfoProps = {
 const WalletInfo = ({ walletName, walletAddress }: walletInfoProps) => {
   return (
     <div className="flex items-center gap-x-4 my-28 pl-24">
-      <img src={PhotoJoke.src} alt="profileimg" className="w-20 rounded-full" />
+      <img
+        src={ProfilePicture.src}
+        alt="profileimg"
+        className="w-20 h-20 rounded-full"
+      />
       <div>
         <span className="block font-bold">{walletName}</span>
         <span>{walletAddress}</span>
