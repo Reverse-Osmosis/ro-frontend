@@ -3,7 +3,7 @@ import Card from "../src/components/card";
 import Footer from "../src/components/footer";
 import Header from "../src/components/header";
 import Layout from "../src/components/layout";
-import {PopUpAtom} from "../src/components/ui/PopUpAtom/PopUp.atom";
+import {PopUpAtom} from "../src/components/ui/atoms/PopUpAtom/PopUp.atom";
 
 function Home() {
     return (
