@@ -50,28 +50,7 @@ function Card({ status = Status.OPEN }: cardProps) {
   return (
     <div className="bg-customCard rounded-2xl overflow-hidden">
       <div className=" px-5 pt-5  cursor-pointer relative">
-        <div className="flex justify-around items-center gap-x-5 mb-12">
-          <div>
-            <h2 className="font-bold pb-2">Project Name</h2>
-            <FontAwesomeIcon
-              icon={faTwitter}
-              style={{
-                fontSize: "1.5rem",
-                color: "white",
-              }}
-            />
-            <FontAwesomeIcon
-              icon={faDiscord}
-              style={{
-                fontSize: "1.5rem",
-                color: "white",
-              }}
-            />
-          </div>
-          <div>
-            <span className="block bg-white-emphasis w-12 h-12 rounded-full"></span>
-          </div>
-        </div>
+        <CardHeader />
         <div className="pb-10">
           <span className="block">Launch Date</span>
           <span className="text-lg">4 Days 00:00:00</span>
@@ -113,5 +92,32 @@ function Card({ status = Status.OPEN }: cardProps) {
     </div>
   );
 }
+
+const CardHeader = () => {
+  return (
+    <div className="flex justify-around items-center gap-x-5 mb-12">
+      <div>
+        <h2 className="font-bold pb-2">Project Name</h2>
+        <FontAwesomeIcon
+          icon={faTwitter}
+          style={{
+            fontSize: "1.5rem",
+            color: "white",
+          }}
+        />
+        <FontAwesomeIcon
+          icon={faDiscord}
+          style={{
+            fontSize: "1.5rem",
+            color: "white",
+          }}
+        />
+      </div>
+      <div>
+        <span className="block bg-white-emphasis w-12 h-12 rounded-full"></span>
+      </div>
+    </div>
+  );
+};
 
 export default Card;
