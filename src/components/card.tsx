@@ -3,6 +3,7 @@ import { faTwitter, faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OsmoIcon from "@assets/superfluid-osmo.svg";
 import AtomIcon from "@assets/atom.svg";
+import CardHeaderIcon from "@assets/card-header-icon.svg";
 import {
   faLock,
   faUnlockKeyhole,
@@ -114,7 +115,9 @@ const CardHeader = () => {
         />
       </div>
       <div>
-        <span className="block bg-white-emphasis w-12 h-12 rounded-full"></span>
+        <CardHeaderIcon className="rounded-full " />
+
+        {/* <span className="block bg-white-emphasis "></span> */}
       </div>
     </div>
   );
