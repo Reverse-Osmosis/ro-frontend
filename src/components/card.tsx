@@ -115,9 +115,7 @@ const CardHeader = () => {
         />
       </div>
       <div>
-        <CardHeaderIcon className="rounded-full " />
-
-        {/* <span className="block bg-white-emphasis "></span> */}
+        <CardHeaderIcon className=" " />
       </div>
     </div>
   );
